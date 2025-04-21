@@ -1,0 +1,378 @@
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+
+}
+
+
+.main {
+    background: linear-gradient(135deg, #1a1919, #222227, #000000);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: none;
+    transition: 1s;
+
+}
+
+.login {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5), rgba(0,0,0,0.3)), 
+    url("project imgs/lubGc_1.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "IBM Plex Sans", sans-serif;
+    display: flex !important;
+}
+
+.show-login {
+    display: none !important;
+}
+
+.login h4 {
+    color: white;
+    font-weight: 600 ;
+    font-family: sans-serif;
+}
+
+.fa-folder:hover {
+    text-shadow: -5px 5px 3px rgb(255, 255, 255);
+}
+.fa-facebook {
+    color: #1877F2;
+}
+
+.fa-instagram {
+    color: #E4405F;
+}
+
+.fa-github {
+    color: #3d3d3d;
+}
+
+.fa-linkedin {
+    color: #0A66C2;
+}
+
+.fa-solid {
+    margin-top: 5px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.icon {
+    background-color: rgb(109, 108, 107);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin-left: 1rem;
+    border-radius: 50%;
+}
+
+.fa-folder {
+    color: rgb(255, 230, 0);
+    font-size: 50px;
+    padding-left: 0.3rem;
+    cursor: pointer;
+}
+
+#login-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #000000, #1b1b1d, #000000);
+    color: white;
+    left: 0;
+    height: 8%;
+    padding: 10px;
+}
+
+.nav-items {
+    position: absolute;
+    bottom: -500%;
+    transition: 0.5s linear;
+    background-color: rgb(39, 39, 39);
+    padding: 15px;
+    border-radius: 25px;
+}
+
+.nav-items p {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.show-nav {
+    margin-left: 0;
+    bottom: 90%;
+}
+
+
+
+.modal-header h5 {
+    font-weight: 800;
+}
+
+.folder p {
+    font-weight: 500;
+}
+
+.modal-content {
+    background-color: #1e1e20;
+    color: white;
+}
+
+.modal-header {
+    background-color: black;
+}
+
+.icons p {
+    font-weight: 600;
+}
+
+img {
+    width: 200px;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.portfolio-item {
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.modal-body {
+    max-height: 500px;
+    /* Adjust as needed */
+    overflow-y: auto;
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+    /* Scrollbar ki width */
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: #2c2c2c;
+    /* Scrollbar background color */
+    border-radius: 10px;
+}
+.modal-body::-webkit-scrollbar-thumb {
+    background: #ff9800;
+    /* Scrollbar thumb (moving part) color */
+    border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: #e68900;
+    /* Hover pe color change */
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+/* Agar specific color chahiye */
+.modal-header .btn-close {
+    opacity: 1;
+    border-radius: 0;
+}
+
+
+
+.portfolio-item h5 {
+    color: orange;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 800;
+}
+
+.login .currentTime{
+    position: absolute;
+    left: 0;
+    bottom:0;
+    font-size: 60px;
+    font-family: sans-serif;
+    margin: 20px;
+    
+}
+
+.dp {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    aspect-ratio: 1/2;
+
+}
+
+.fa-windows {
+    padding-top: 0.5rem;
+    font-size: 25px;
+}
+
+.login-box {
+    background: transparent;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+
+
+.btn-login {
+    background: #202325;
+    border: none;
+    padding: 10px;
+    font-weight: 700;
+}
+
+.btn-login:hover {
+    background: #0053a6;
+}
+
+/* Hover effect */
+.modal-header .btn-close:hover {
+    background-color: rgb(199, 15, 15);
+    filter: invert(0);
+}
+
+.folder p {
+    color: white;
+}
+
+.light {
+    background: linear-gradient(135deg, #ffffff, #dbdada, #c2c2c2) !important;
+    color: black !important;
+    transition: 1s;
+}
+
+.light p {
+    color: rgb(0, 0, 0);
+}
+
+.light .portfolio-info span {
+    color: white;
+}
+
+.light .nav-items p {
+    color: white;
+}
+
+.light .portfolio-item h5 {
+    color: black;
+}
+
+.light .fa-folder:hover {
+    text-shadow: -5px 5px 3px rgb(0, 0, 0);
+}
+
+.fa-windows:hover {
+    color: #0053a6;
+}
+
+.fa-windows.active {
+    color: #0053a6;
+    /* Blue color when clicked */
+}
+
+.fa-solid:hover {
+    color: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.light .fa-folder {
+    color: #1cb4f0;
+}
+
+.light .fa-moon {
+    color: rgb(251, 255, 0);
+}
+
+.light .modal-body {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.light .portfolio-item {
+    border: 2px solid black;
+}
+
+.light .fa-link {
+    color: orange;
+}
+
+.light .time p {
+    color: white;
+}
+
+.fa-facebook:hover {
+    color: orange;
+}
+
+.fa-linkedin:hover {
+    color: orange;
+}
+
+.fa-instagram:hover {
+    color: orange;
+}
+
+.fa-github:hover {
+    color: orange;
+}
+
+.shutdown {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/87b8dc36-1138-4ab7-b834-efdd829e6412/db8lvh8-7fbc37b9-0028-483d-b653-2f9b41a7d765.png/v1/fill/w_1024,h_576,q_80,strp/wallpaper___turn_off_your_computer_by_drewdini_db8lvh8-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvODdiOGRjMzYtMTEzOC00YWI3LWI4MzQtZWZkZDgyOWU2NDEyXC9kYjhsdmg4LTdmYmMzN2I5LTAwMjgtNDgzZC1iNjUzLTJmOWI0MWE3ZDc2NS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.C_8XmhqrBHZTnhVj3DOXSLYDUeddjpJ3b_YnNDuZWH4");
+    display: none;
+}
+
+.time {
+    position: absolute;
+    right: 0;
+    top: 30%;
+    padding-right: 1rem;
+}
+
+@media screen and (max-width:460px) {
+    .portfolio-item {
+        flex-direction: column;
+    }
+
+    img {
+        width: 300px;
+    }
+    #login-img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+    }
+    .btn-login{
+        
+        font-size: 15px;
+    }
+    .login .currentTime{
+        font-size: 40px;
+    }
+}
