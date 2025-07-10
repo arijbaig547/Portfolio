@@ -14,27 +14,34 @@ body {
     transition: 1s;
 
 }
-
 .login {
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5), rgba(0,0,0,0.3)), 
-    url("project imgs/lubGc_1.jpg");
-
+    background:     url("Untitled-1.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: 'Poppins', sans-serif;
     display: flex !important;
 }
+
 
 .show-login {
     display: none !important;
 }
 
-.login h4 {
+.login h3 {
+    font-size: 22px;
+    font-weight: 800;
     color: white;
-    font-weight: 600 ;
-    font-family: sans-serif;
+    margin-bottom: 5px;
 }
+
+.login p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #f5f5f5;
+    margin-bottom: 25px;
+}
+
 
 .fa-folder:hover {
     text-shadow: -5px 5px 3px rgb(255, 255, 255);
@@ -125,88 +132,126 @@ footer {
 }
 
 .modal-content {
-    background-color: #1e1e20;
-    color: white;
+    background: linear-gradient(to bottom, #1e1e20, #121212);
+    color: #f1f1f1;
+    border-radius: 25px;
 }
 
 .modal-header {
     background-color: black;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
-.icons p {
-    font-weight: 600;
+.modal-header h5 {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    color: #ff9800;
+    font-weight: 800;
 }
 
-img {
-    width: 200px;
-
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-.portfolio-item {
-    border: 2px solid white;
-    padding: 20px;
-    border-radius: 25px;
-}
-
-.modal-body {
-    max-height: 500px;
-    /* Adjust as needed */
-    overflow-y: auto;
-}
-
-.modal-body::-webkit-scrollbar {
-    width: 8px;
-    /* Scrollbar ki width */
-}
-
-.modal-body::-webkit-scrollbar-track {
-    background: #2c2c2c;
-    /* Scrollbar background color */
-    border-radius: 10px;
-}
-.modal-body::-webkit-scrollbar-thumb {
-    background: #ff9800;
-    /* Scrollbar thumb (moving part) color */
-    border-radius: 10px;
-}
-
-.modal-body::-webkit-scrollbar-thumb:hover {
-    background: #e68900;
-    /* Hover pe color change */
-}
-
+/* Close button */
 .modal-header .btn-close {
     filter: invert(1);
-}
-
-/* Agar specific color chahiye */
-.modal-header .btn-close {
     opacity: 1;
     border-radius: 0;
 }
 
+/* Scrollbar for modal body */
+.modal-body {
+    max-height: 500px;
+    overflow-y: auto;
+}
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+.modal-body::-webkit-scrollbar-track {
+    background: #2c2c2c;
+    border-radius: 10px;
+}
+.modal-body::-webkit-scrollbar-thumb {
+    background: #ff9800;
+    border-radius: 10px;
+}
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: #e68900;
+}
 
+/* Portfolio Item Card Style */
+.portfolio-item {
+    background: #2c2c2c;
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, orange, rebeccapurple) 1;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
 
+.portfolio-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(255, 153, 0, 0.5);
+}
+
+/* Portfolio Images */
+.portfolio-item img {
+    width: 180px;
+    border-radius: 15px;
+    border: 2px solid #444;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Tech Tags (HTML, CSS, etc.) */
+.portfolio-item h6 span {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-size: 12px;
+    margin-right: 6px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Title Font */
 .portfolio-item h5 {
     color: orange;
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: 800;
+    margin-bottom: 10px;
 }
 
-.login .currentTime{
+/* Project Link */
+.portfolio-info a {
+    color: #ff9800;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.portfolio-info a:hover {
+    color: white;
+}
+
+/* Optional Modal Animation */
+.modal.fade .modal-dialog {
+    transform: translateY(-50px);
+    transition: transform 0.3s ease-out;
+}
+.modal.fade.show .modal-dialog {
+    transform: translateY(0);
+}
+.currentTime {
     position: absolute;
-    left: 0;
-    bottom:0;
-    font-size: 60px;
-    font-family: sans-serif;
-    margin: 20px;
+    left: 20px;
+    bottom: 20px;
     
 }
+
 
 .dp {
     border-radius: 50%;
@@ -222,31 +267,47 @@ a {
 }
 
 .login-box {
-    background: transparent;
-    padding: 30px;
-    border-radius: 10px;
-    width: 300px;
+    
+   
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    min-width: 350px;
+    
 }
 
+
 .profile-img {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    margin-bottom: 15px;
+    object-fit: cover;
+    border: 4px solid white;
+    margin-bottom: 20px;
 }
+
 
 
 
 .btn-login {
-    background: #202325;
+    background: linear-gradient(135deg, #ff9800, #ff5722);
     border: none;
-    padding: 10px;
+    padding: 12px 25px;
     font-weight: 700;
+    color: white;
+    font-size: 14px;
+    border-radius: 25px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
 }
 
 .btn-login:hover {
-    background: #0053a6;
+    background: linear-gradient(135deg, #ffb300, #e65100);
+    transform: scale(1.05);
 }
+
+
 
 /* Hover effect */
 .modal-header .btn-close:hover {
@@ -258,31 +319,7 @@ a {
     color: white;
 }
 
-.light {
-    background: linear-gradient(135deg, #ffffff, #dbdada, #c2c2c2) !important;
-    color: black !important;
-    transition: 1s;
-}
 
-.light p {
-    color: rgb(0, 0, 0);
-}
-
-.light .portfolio-info span {
-    color: white;
-}
-
-.light .nav-items p {
-    color: white;
-}
-
-.light .portfolio-item h5 {
-    color: black;
-}
-
-.light .fa-folder:hover {
-    text-shadow: -5px 5px 3px rgb(0, 0, 0);
-}
 
 .fa-windows:hover {
     color: #0053a6;
@@ -299,30 +336,77 @@ a {
     cursor: pointer;
 }
 
-.light .fa-folder {
-    color: #1cb4f0;
+
+
+.light {
+    background: linear-gradient(135deg, #f2f2f2, #ffffff, #e2e2e2) !important;
+    color: #1a1a1a !important;
+    transition: 0.6s;
 }
 
-.light .fa-moon {
-    color: rgb(251, 255, 0);
+.light p,
+.light a,
+.light .icons p,
+.light .folder p {
+    color: #1a1a1a !important;
 }
 
-.light .modal-body {
-    background-color: whitesmoke;
-    color: black;
+.light .portfolio-info span {
+    color: #1a1a1a;
+}
+
+.light .nav-items {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.light .nav-items p {
+    color: #1a1a1a;
 }
 
 .light .portfolio-item {
-    border: 2px solid black;
+    border: 2px solid #000;
+    background: #fff;
 }
 
-.light .fa-link {
-    color: orange;
+.light .portfolio-item h5 {
+    color: #ff8c00;
 }
 
-.light .time p {
+.light .fa-folder {
+    color: #0077ff;
+}
+
+.light .fa-folder:hover {
+    text-shadow: -3px 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+.light .fa-moon {
+    color: #ffc107;
+}
+
+.light .modal-body {
+    background-color: #f9f9f9;
+    color: #1a1a1a;
+}
+
+.light .btn-login {
+    background: #ececec;
+    color: #000;
+}
+
+.light .btn-login:hover {
+    background: #007bff;
     color: white;
 }
+
+.light .fa-facebook:hover,
+.light .fa-instagram:hover,
+.light .fa-github:hover,
+.light .fa-linkedin:hover {
+    color: #007bff;
+}
+
 
 .fa-facebook:hover {
     color: orange;
