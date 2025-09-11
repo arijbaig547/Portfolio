@@ -1,329 +1,203 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mirza Arij Baig — Portfolio (Windows UI)</title>
 
-    <link rel="stylesheet" href="style.css">
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=IBM+Plex+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mobile.css">
 </head>
 
 <body>
 
-    <div class="main container-fluid min-vh-100  px-4 py-3">
-        <div class="row icons">
-            <!-- Portfolio Folder -->
-            <div class="col folder pt-5" data-bs-toggle="modal" data-bs-target="#portfolioModal">
-                <i class="fas fa-folder"></i>
-                <p class="fw-bold">Projects</p>
-            </div>
-            <!-- About Me Folder -->
-            <div class="col- folder pt-5" data-bs-toggle="modal" data-bs-target="#aboutModal">
-                <i class="fas fa-folder"></i>
-                <p class="fw-bold">About Me</p>
-            </div>
-            <!-- Contact Folder -->
-            <div class="col folder pt-5" data-bs-toggle="modal" data-bs-target="#contactModal">
-                <i class="fas fa-folder"></i>
-                <p class="fw-bold">Contact</p>
-            </div>
-         
-           
-        </div>
-        <!-- Portfolio Modal -->
-        <div class="modal fade" id="portfolioModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-lg"> <!-- Large modal for better spacing -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Projects</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container">
-                            <div class="row">
-                                <!-- Portfolio Item 1 -->
-                                <div class="col-lg-12 col-md-12 col-sm-12 portfolio-item d-flex mt-2">
-                                    <img class="img-fluid" src="project imgs/car.png" alt="Car Showroom">
-                                    <div class="portfolio-info px-3 mt-3">
-                                        <h5>Car Showroom Website-Clone</h5>
-                                        <h6><span style="background-color: orange;">HTML</span><span class="px-2"
-                                                style="background-color: rebeccapurple;">CSS</span><span class="px-3"
-                                                style="background-color: rgb(255, 230, 0); color: black;">JS</span><span
-                                                style="background-color:rgb(9, 60, 226);color: white;">BS</span></h6>
-                                        <a href="https://mellifluous-queijadas-b1afee.netlify.app/" <i
-                                            class="fa-solid fa-link"></i></a>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-lg-12 col-md-12 col-sm-12 portfolio-item d-flex mt-4">
-                                    <img class="img-fluid" src="project imgs/restaurant.png" alt="Car Showroom">
-                                    <div class="portfolio-info px-3 mt-3">
-                                        <h5>Restaurant Website Clone</h5>
-                                        <h6><span style="background-color: orange;">HTML</span><span class="px-2"
-                                                style="background-color: rebeccapurple;">CSS</span><span class="px-3"
-                                                style="background-color: rgb(255, 230, 0); background-color:rgb(9, 60, 226);color: white;">JS</span>
-                                            <span style="background-color:rgb(9, 60, 226);color: white;">BS</span>
-                                        </h6>
-                                        </h6>
-                                        <a href="https://papaya-sfogliatella-1cf8f0.netlify.app/" <i
-                                            class="fa-solid fa-link"></i> </a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 portfolio-item d-flex mt-4">
-                                    <img class="img-fluid" src="project imgs/linkedin.png" alt="Car Showroom">
-                                    <div class="portfolio-info px-3 mt-3">
-                                        <h5>Linkedin Clone</h5>
-                                        <h6><span style="background-color: orange;">HTML</span><span class="px-2"
-                                                style="background-color: rebeccapurple;">CSS</span><span class="px-3"
-                                                style="background-color: rgb(255, 230, 0); background-color:rgb(9, 60, 226);color: white;">JS</span>
-                                            <span style="background-color:rgb(9, 60, 226);color: white;">BS</span>
-                                        </h6>
-
-                                        </h6>
-                                        <a href="https://67e8a4d7a0eeb00f676c13f1--kaleidoscopic-toffee-2d90e5.netlify.app/"
-                                            <i class="fa-solid fa-link"></i> </a>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12 col-sm-12 portfolio-item d-flex mt-4">
-                                    <img class="img-fluid" src="project imgs/dashboard.png" alt="Car Showroom">
-                                    <div class="portfolio-info px-3 mt-3">
-                                        <h5>Tech-Care Dashboard-UI Only</h5>
-                                        <h6><span style="background-color: orange;">HTML</span><span class="px-2"
-                                                style="background-color: rebeccapurple;">CSS</span><span class="px-3"
-                                                style="background-color: rgb(255, 230, 0); background-color:rgb(9, 60, 226);color: white;">JS</span>
-                                            <span style="background-color:rgb(9, 60, 226);color: white;">BS</span>
-                                        </h6>
-
-                                        </h6>
-                                        <a href="https://extraordinary-kitsune-e7c5a5.netlify.app/"
-                                            <i class="fa-solid fa-link"></i> </a>
-                                    </div>
-                                </div>
-                            
-                           
-                                <div class="col-lg-12 col-md-12 col-sm-12 portfolio-item d-flex mt-4">
-                                    <img class="img-fluid" src="project imgs/eeyes.png" alt="Car Showroom">
-                                    <div class="portfolio-info px-3 mt-3">
-                                        <h5>Interactive Cursor Following Eyes</h5>
-                                        <h6><span style="background-color: orange;">HTML</span><span class="px-2"
-                                                style="background-color: rebeccapurple;">CSS</span><span class="px-3"
-                                                style="background-color: rgb(255, 230, 0); background-color:rgb(9, 60, 226);color: white;">JS</span>
-                                        </h6>
-                                        <a href="https://67e947115052052a01880fe7--joyful-marzipan-d49a85.netlify.app/"
-                                            <i class="fa-solid fa-link"></i> </a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 portfolio-item d-flex mt-4">
-                                    <img class="img-fluid" src="project imgs/quizth.png" alt="Car Showroom">
-                                    <div class="portfolio-info px-3 mt-3">
-                                        <h5>Quiz Master</h5>
-                                        <h6><span style="background-color: orange;">HTML</span><span class="px-2"
-                                                style="background-color: rebeccapurple;">CSS</span><span class="px-3"
-                                                style="background-color: rgb(255, 230, 0); background-color:rgb(9, 60, 226);color: white;">JS</span>
-                                        </h6>
-                                        <a href="https://quiz-game-app-net.netlify.app/" <i
-                                            class="fa-solid fa-link"></i> </a>
-                                    </div>
-                                </div>
-                           
-                          
-                             
-                                <div class="col-lg-12 col-md-12 col-sm-12 portfolio-item d-flex mt-4">
-                                    <img class="img-fluid" src="project imgs/todo.png" Car Showroom">
-                                    <div class="portfolio-info px-3 mt-3">
-                                        <h5>To-Do List</h5>
-                                        <h6><span style="background-color: orange;">HTML</span><span class="px-2"
-                                                style="background-color: rebeccapurple;">CSS</span><span class="px-3"
-                                                style="background-color: rgb(255, 230, 0); background-color:rgb(9, 60, 226);color: white;">JS</span>
-                                        </h6>
-                                        <a href="https://rad-tarsier-53b940.netlify.app/"
-                                            <i class="fa-solid fa-link"></i> </a>
-                                    </div>
-                                </div>
-                          
-                                <div class="col-lg-12 col-md-12 col-sm-12 portfolio-item d-flex mt-4">
-                                    <img class="img-fluid" src="project imgs/restaurant local.png"Restaurant web thumbnail">
-                                    <div class="portfolio-info px-3 mt-3">
-                                        <h5>Restaurant Website Using Local Storage</h5>
-                                        <h6><span style="background-color: orange;">HTML</span><span class="px-2"
-                                                style="background-color: rebeccapurple;">CSS</span><span class="px-3"
-                                                style="background-color: rgb(255, 230, 0); background-color:rgb(9, 60, 226);color: white;">JS</span>
-                                        </h6>
-                                        <a href="https://saylani-foodpanda-clone.netlify.app/"
-                                            <i class="fa-solid fa-link"></i> </a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 portfolio-item d-flex mt-4">
-                                    <img class="img-fluid" src="project imgs/weather thumb.png"alt="Weather APP ">
-                                    <div class="portfolio-info px-3 mt-3">
-                                        <h5>Weather App Using API</h5>
-                                        <h6><span style="background-color: orange;">HTML</span><span class="px-2"
-                                                style="background-color: rebeccapurple;">CSS</span><span class="px-3"
-                                                style="background-color: rgb(255, 230, 0); background-color:rgb(9, 60, 226);color: white;">JS</span>
-                                        </h6>
-                                        <a href="https://elegant-stroopwafel-d9c15f.netlify.app/"
-                                            <i class="fa-solid fa-link"></i> </a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 portfolio-item d-flex mt-4">
-                                    <img class="img-fluid" src="project imgs/mars.png"alt="Explore Mars ">
-                                    <div class="portfolio-info px-3 mt-3">
-                                        <h5>Explore Mars-NASA API</h5>
-                                        <h6><span style="background-color: orange;">HTML</span><span class="px-2"
-                                                style="background-color: rebeccapurple;">CSS</span><span class="px-3"
-                                                style="background-color: rgb(255, 230, 0); background-color:rgb(9, 60, 226);color: white;">JS</span>
-                                        </h6>
-                                        <a href="https://mars-explore.netlify.app/"
-                                            <i class="fa-solid fa-link"></i> </a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 portfolio-item d-flex mt-4">
-                                    <img class="img-fluid" src="project imgs/thom.png"alt="Explore Mars ">
-                                    <div class="portfolio-info px-3 mt-3">
-                                        <h5>E-comm Store FakeProductAPI</h5>
-                                        <h6><span style="background-color: orange;">HTML</span><span class="px-2"
-                                                style="background-color: rebeccapurple;">CSS</span><span class="px-3"
-                                                style="background-color: rgb(255, 230, 0); background-color:rgb(9, 60, 226);color: white;">JS</span>
-                                        </h6>
-                                        <a href="https://stirring-pixie-2d6de9.netlify.app/"
-                                            <i class="fa-solid fa-link"></i> </a>
-                                    </div>
-                                </div>
-                                <!-- Portfolio Item 2 -->
-
-                                <!-- Portfolio Item 3 -->
-
-
-
-                            </div> <!-- End row -->
-                        </div> <!-- End container -->
-                    </div> <!-- End modal-body -->
-                </div> <!-- End modal-content -->
-            </div> <!-- End modal-dialog -->
-        </div> <!-- End modal -->
-
-
-        <!-- About Me Modal -->
-        <div class="modal fade" id="aboutModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">About Me</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body d-flex flex-column align-items-center">
-                        <img class="img-fluid dp"
-                            src="project imgs/dp.jpg"
-                            alt="" srcset="">
-                        <p class="p-3">Hi, I'm Mirza Arij Baig!
-
-                            I am a passionate web developer and a Computer Science student at NUML University. I
-                            specialize in front-end development with expertise in HTML, CSS, JavaScript, and Bootstrap.
-                            Currently, I’m expanding my knowledge in React and full-stack development.
-                            <br><br>
-                            <span style="font-weight: 700;">What I Do:</span>
-                            Build responsive and interactive websites
-
-                            Work with animations using GSAP and CSS animations
-
-                            Experiment with creative UI/UX designs
-
-                            Learn and explore new web technologies
-                        </p>
-                        <h3 class="text-start">Skills:</h3>
-                        <p>
-                            <i class="fa-brands fa-html5" style="color: orange;"></i> HTML &nbsp;
-                            <i class="fa-brands fa-css3-alt" style="color: blue;"></i> CSS &nbsp;
-                            <i class="fa-brands fa-js" style="color: yellow;"></i> JavaScript &nbsp;<br>
-                            <i class="fa-solid fa-code"></i> GSAP &nbsp;
-                            <i class="fa-brands fa-bootstrap" style="color: purple;"></i> Bootstrap &nbsp;
-                            <i class="fa-brands fa-git-alt" style="color: red;"></i> Git
-                        </p>
-                    </div>
-                </div>
-            </div>
+  <div class="app">
+    <!-- Desktop -->
+    <div class="desktop">
+      <div class="dock" id="dock">
+        <div class="folder-card" data-bs-target="#portfolioModal" data-bs-toggle="modal">
+          <div class="folder-icon"><i class="fa-solid fa-folder-open"></i></div>
+          <div class="folder-title">Projects</div>
+          <div class="folder-sub">Open to view projects</div>
         </div>
 
-        <!-- Contact Modal -->
-        <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Contact</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-center">
-                        <h5 class="fw-bold">Connect With Me</h5>
-                        <!-- Social Media Icons -->
-                        <div class="d-flex justify-content-center gap-3">
-                            <a href="https://www.facebook.com/profile.php?id=100009272815989" target="_blank"><i
-                                    class="fab fa-facebook fa-2x"></i></a>
-                            <a href="https://www.instagram.com/arijbaig79/" target="_blank"><i
-                                    class="fab fa-instagram fa-2x"></i></a>
-                            <a href="https://github.com/arijbaig547" target="_blank"><i
-                                    class="fab fa-github fa-2x"></i></a>
-                            <a href="https://www.linkedin.com/in/mirza-arij-baig-32839b2b4/" target="_blank"><i
-                                    class="fab fa-linkedin fa-2x"></i></a>
-             
-                            
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="folder-card" data-bs-target="#aboutModal" data-bs-toggle="modal">
+          <div class="folder-icon" style="background:linear-gradient(180deg,#cfe9ff,#9dd3ff);color:#001"><i class="fa-solid fa-user"></i></div>
+          <div class="folder-title">About Me</div>
+          <div class="folder-sub">Who I am & what I do</div>
         </div>
 
-        <footer class="container-fluid px-3  pb-3 m-0">
-            <div class="nav-items d-flex flex-column ">
-                <div class="icon">
-                    <i id="powerbtn" class="fa-solid fa-power-off"></i><br>
-                </div>
-                <p class="px-2">Sign Out</p>
-                <div class="icon">
-                    <i id="modebtn" class="fa-solid fa-moon"></i>
-                </div>
-                <p>Change Mode</p>
+        <div class="folder-card" data-bs-target="#contactModal" data-bs-toggle="modal">
+          <div class="folder-icon" style="background:linear-gradient(180deg,#a6ffd1,#67f2b8);color:#001"><i class="fa-solid fa-envelope-open-text"></i></div>
+          <div class="folder-title">Contact</div>
+          <div class="folder-sub">Connect with me</div>
+        </div>
 
-            </div>
-            <i id="window" class="fa-brands fa-windows"></i>
-            <div class="time mb-5 pb-5">
-                <p class="text-end currentTime"></p>
-            </div>
-        </footer>
+        <div class="folder-card" id="lockToggle">
+          <div class="folder-icon" style="background:linear-gradient(180deg,#d7c1ff,#b38bff);color:#001"><i class="fa-solid fa-power-off"></i></div>
+          <div id="signOut" class="folder-title">Sign Out</div>
+          <div class="folder-sub">Return to lock screen</div>
+        </div>
 
+        <div class="folder-card" id="themeToggle">
+          <div class="folder-icon" style="background:linear-gradient(180deg,#fff8b0,#ffe600);color:#001"><i class="fa-solid fa-circle-half-stroke"></i></div>
+          <div class="folder-title">Change Theme</div>
+          <div class="folder-sub">Toggle light/dark</div>
+        </div>
+
+        <div class="folder-card" data-bs-target="#servicesModal" data-bs-toggle="modal">
+          <div class="folder-icon" style="background:linear-gradient(180deg,#ffa6a6,#ff6767);color:#001"><i class="fa-solid fa-briefcase"></i></div>
+          <div class="folder-title">Services</div>
+          <div class="folder-sub">What I offer</div>
+        </div>
+      </div>
     </div>
-  <div class="login container-fluid min-vh-100 px-4 py-3 d-flex justify-content-center align-items-center position-relative">
-  
-  <!-- Login Box -->
-  <div class="login-box text-center">
-    <img id="login-img" src="project imgs/login-dp.jpg" class="profile-img" alt="User">
-    <h3 class="text-white fw-bold">MIRZA ARIJ BAIG</h3>
-    <p class="text-light fw-bold">Front-end Developer</p>
-    <button class="btn btn-login w-100 text-white">Visit Portfolio</button>
+
+    <!-- Taskbar -->
+    <div class="taskbar" id="taskbar">
+      <div class="taskbar-btn active" id="tb-home" title="Home"><i class="fa-brands fa-windows fa-lg"></i></div>
+      <div class="taskbar-btn" id="tb-projects" title="Projects"><i class="fa-solid fa-folder-open"></i></div>
+      <div class="taskbar-btn" id="tb-about" title="About"><i class="fa-solid fa-user"></i></div>
+      <div class="taskbar-btn" id="tb-contact" title="Contact"><i class="fa-solid fa-envelope"></i></div>
+    </div>
+
+    <!-- Lock Screen -->
+    <div class="lock-screen" id="lockScreen">
+      <div class="lock-box">
+        <img src="project imgs/login-dp.jpg" alt="avatar" class="lock-avatar" id="lockAvatar" onerror="this.style.display='none'">
+        <div class="lock-name">MIRZA ARIJ BAIG</div>
+        <div class="lock-role">Front-end Developer</div>
+        <button class="btn-visit" id="visitBtn">Visit Portfolio</button>
+      </div>
+      <div id="goodbyeMsg" style="position:absolute; top:30%; left:50%; transform: translateX(-50%); font-size:2rem; color:#fff; opacity:0; pointer-events:none;">
+        Shutting Down..Thanks for Visiting
+      </div>
+    </div>
   </div>
 
-  <!-- Time Element Outside login-box -->
-  <p class="currentTime text-light fs-1 m-0"></p>
-
-</div>
-
-
-    <div class="shutdown container-fluid min-vh-100">
+  <!-- Projects Modal -->
+  <div class="modal fade" id="portfolioModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Projects</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row g-3" id="projectsList">
+              <!-- Project Cards injected by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
+  <!-- About Modal -->
+  <div class="modal fade" id="aboutModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered">
+      <div class="modal-content about-modal">
+        <div class="modal-header">
+          <h5 class="modal-title">About Me</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="about-card">
+            <div class="about-image">
+              <img src="project imgs/dp.jpg" alt="dp" class="avatar-large" onerror="this.style.display='none'">
+            </div>
+            <div class="about-text">
+              <h4 class="about-name">Mirza Arij Baig</h4>
+              <p class="about-description">
+                Hi — I'm a front-end developer and Computer Science student at NUML.
+                I build responsive UIs using HTML, CSS, and JavaScript.
+                I enjoy creating smooth animations and clean designs, and I’m currently learning React
+                and full-stack development.
+              </p>
+              <div class="skills-title">Skills</div>
+              <div class="skills-list">
+                <span class="pill">HTML</span>
+                <span class="pill">CSS</span>
+                <span class="pill">JavaScript</span>
+                <span class="pill">Bootstrap</span>
+                <span class="pill">GSAP</span>
+                <span class="pill">TypeScript</span>
+                <span class="pill">Supabase</span>
+              </div>
+            </div>
+          </div>
+          <!-- Hire Me CTA -->
+          <div class="text-center mt-3">
+            <a href="mailto:arijbaig97@gmail.com" class="btn-visit">
+              <i class="fa-solid fa-paper-plane"></i> Hire Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"
-        integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Contact</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <p style="color:var(--muted);">Connect with me on</p>
+          <div class="socials d-flex justify-content-center mt-2">
+            <a href="https://www.facebook.com/profile.php?id=100009272815989" target="_blank" title="Facebook"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="https://www.instagram.com/arijbaig79/" target="_blank" title="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="https://github.com/arijbaig547" target="_blank" title="GitHub"><i class="fab fa-github fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/mirza-arij-baig-32839b2b4/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Modal -->
+  <div class="modal fade" id="servicesModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered">
+      <div class="modal-content services-modal">
+        <div class="modal-header border-0">
+          <h5 class="modal-title fw-bold text-gradient">My Services</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="services-list">
+            <li><i class="fas fa-laptop-code"></i> Responsive Website Design</li>
+            <li><i class="fas fa-code"></i> HTML, CSS, JavaScript Development</li>
+            <li><i class="fas fa-magic"></i> UI/UX Optimization</li>
+            <li><i class="fas fa-bolt"></i> Website Animation with GSAP</li>
+          </ul>
+        </div>
+        <div class="modal-footer border-0 text-center">
+          <a href="mailto:arijbaig547@gmail.com" class="btn-visit">
+            <i class="fa-solid fa-paper-plane"></i> Hire Me
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

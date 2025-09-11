@@ -1,462 +1,539 @@
+:root {
+    --bg-dark: #0f1115;
+    --panel: rgba(255, 255, 255, 0.06);
+    --accent: #0a84ff;
+    /* windows blue */
+    --muted: #9aa4b2;
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --radius: 14px;
+    --glass-blur: 10px;
+}
+
+/* Reset & base */
+* {
+    box-sizing: border-box
+}
+
+html,
 body {
-    font-family: "IBM Plex Sans", sans-serif;
+    height: 100%
+}
 
+body {
+    margin: 0;
+    font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', 'IBM Plex Sans', sans-serif;
+    background: linear-gradient(180deg, #071021 0%, #0b0c0e 60%);
+    color: #e6eef8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+}
+
+/* App wrapper */
+.app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.services-modal {
+    background: rgba(20, 20, 20, 0.85);
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
 }
 
 
-.main {
-    background: linear-gradient(135deg, #1a1919, #222227, #000000);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.services-list {
+    list-style: none;
+    padding: 0;
+}
+
+.services-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    font-size: 1rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.services-list li i {
+    color: #ff6a00;
+    font-size: 1.2rem;
+}
+
+.services-list li:hover {
+    transform: translateX(5px);
+    color: #ff6a00;
+}
+
+
+/* Top area - fake desktop */
+.desktop {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 36px 48px 120px;
     position: relative;
-    display: none;
-    transition: 1s;
-
-}
-.login {
-    background:url("Untitled-1.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-family: 'Poppins', sans-serif;
-    display: flex !important;
+    backdrop-filter: none;
 }
 
-
-.show-login {
-    display: none !important;
+/* Center container for folders */
+.dock {
+    width: 1100px;
+    max-width: 95%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 26px;
+    align-items: start;
 }
 
-.login h3 {
-    font-size: 22px;
-    font-weight: 800;
-    color: white;
-    margin-bottom: 5px;
-}
-
-.login p {
-    font-size: 14px;
-    font-weight: 500;
-    color: #f5f5f5;
-    margin-bottom: 25px;
-}
-
-
-.fa-folder:hover {
-    text-shadow: -5px 5px 3px rgb(255, 255, 255);
-}
-.fa-facebook {
-    color: #1877F2;
-}
-
-.fa-instagram {
-    color: #E4405F;
-}
-
-.fa-github {
-    color: #3d3d3d;
-}
-
-.fa-linkedin {
-    color: #0A66C2;
-}
-
-.fa-solid {
-    margin-top: 5px;
-    font-size: 20px;
-    text-align: center;
-    border-radius: 50%;
-}
-
-.icon {
-    background-color: rgb(109, 108, 107);
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    margin-left: 1rem;
-    border-radius: 50%;
-}
-
-.fa-folder {
-    color: rgb(255, 230, 0);
-    font-size: 50px;
-    padding-left: 0.3rem;
+/* Folder card (Windows style) */
+.folder-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+    border: 1px solid var(--glass-border);
+    border-radius: 18px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
     cursor: pointer;
+    box-shadow: 0 6px 30px rgba(2, 6, 23, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.02);
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    backdrop-filter: blur(var(--glass-blur));
 }
 
-#login-img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+
+.folder-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(10, 132, 255, 0.12)
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: linear-gradient(135deg, #000000, #1b1b1d, #000000);
-    color: white;
-    left: 0;
-    height: 8%;
-    padding: 10px;
+.folder-icon {
+    width: 72px;
+    height: 52px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #ffd54a, #ffb300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #1a1a1a;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-.nav-items {
-    position: absolute;
-    bottom: -500%;
-    transition: 0.5s linear;
-    background-color: rgb(39, 39, 39);
-    padding: 15px;
-    border-radius: 25px;
-}
-
-.nav-items p {
-    font-size: 13px;
+.folder-title {
     font-weight: 700;
+    color: #eaf2ff
 }
 
-.show-nav {
-    margin-left: 0;
-    bottom: 90%;
+.folder-sub {
+    font-size: 13px;
+    color: var(--muted);
 }
 
-
-
-.modal-header h5 {
-    font-weight: 800;
-}
-
-.folder p {
-    font-weight: 500;
-}
-
+/* Glass modal style overrides (we'll re-use bootstrap modal markup) */
 .modal-content {
-    background: linear-gradient(to bottom, #1e1e20, #121212);
-    color: #f1f1f1;
-    border-radius: 25px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    color: var(--muted);
 }
 
 .modal-header {
-    background-color: black;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
-.modal-header h5 {
-    font-family: "Poppins", sans-serif;
-    font-size: 24px;
-    color: #ff9800;
-    font-weight: 800;
+.modal-title {
+    color: #eaf2ff;
+    font-weight: 800
 }
 
-/* Close button */
-.modal-header .btn-close {
+.btn-close {
     filter: invert(1);
-    opacity: 1;
-    border-radius: 0;
+    opacity: 0.9
 }
 
-/* Scrollbar for modal body */
 .modal-body {
-    max-height: 500px;
-    overflow-y: auto;
-}
-.modal-body::-webkit-scrollbar {
-    width: 8px;
-}
-.modal-body::-webkit-scrollbar-track {
-    background: #2c2c2c;
-    border-radius: 10px;
-}
-.modal-body::-webkit-scrollbar-thumb {
-    background: #ff9800;
-    border-radius: 10px;
-}
-.modal-body::-webkit-scrollbar-thumb:hover {
-    background: #e68900;
+    max-height: 60vh;
+    overflow: auto
 }
 
-/* Portfolio Item Card Style */
-.portfolio-item {
-    background: #2c2c2c;
-    border: 2px solid transparent;
-    border-image: linear-gradient(45deg, orange, rebeccapurple) 1;
-    padding: 20px;
-    border-radius: 20px;
+/* Portfolio card inside modal */
+.project-card {
     display: flex;
+    gap: 18px;
+    padding: 14px;
+    border-radius: 12px;
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.02);
     align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 20px;
 }
 
-.portfolio-item:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 15px rgba(255, 153, 0, 0.5);
+.project-thumb {
+    width: 140px;
+    height: 92px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.03)
 }
 
-/* Portfolio Images */
-.portfolio-item img {
-    width: 180px;
-    border-radius: 15px;
-    border: 2px solid #444;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+.project-info h5 {
+    margin: 0;
+    color: #fff;
+    font-weight: 700
 }
 
-/* Tech Tags (HTML, CSS, etc.) */
-.portfolio-item h6 span {
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 50px;
-    font-size: 12px;
-    margin-right: 6px;
-    font-weight: bold;
-    color: white;
+.pills {
+    margin-top: 8px
 }
 
-/* Title Font */
-.portfolio-item h5 {
-    color: orange;
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 800;
-    margin-bottom: 10px;
-}
-
-/* Project Link */
-.portfolio-info a {
-    color: #ff9800;
-    font-weight: bold;
-    margin-top: 10px;
-    display: inline-block;
-    transition: color 0.3s ease;
-}
-
-.portfolio-info a:hover {
-    color: white;
-}
-
-/* Optional Modal Animation */
-.modal.fade .modal-dialog {
-    transform: translateY(-50px);
-    transition: transform 0.3s ease-out;
-}
-.modal.fade.show .modal-dialog {
-    transform: translateY(0);
-}
-.currentTime {
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-    
-}
-
-
-.dp {
+#lockAvatar {
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    aspect-ratio: 1/2;
-
-}
-
-.fa-windows {
-    padding-top: 0.5rem;
-    font-size: 25px;
-}
-
-.login-box {
-    
-   
-    border-radius: 20px;
-    padding: 40px;
-    text-align: center;
-    min-width: 350px;
-    
 }
 
 
-.profile-img {
+
+.project-actions {
+    margin-top: 10px
+}
+
+.btn-outline-accent {
+    border: 1px solid rgba(10, 132, 255, 0.14);
+    color: var(--accent);
+    background: transparent;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-weight: 700
+}
+
+/* About card */
+
+
+.avatar {
     width: 120px;
     height: 120px;
-    border-radius: 50%;
+    border-radius: 16px;
     object-fit: cover;
-    border: 4px solid white;
-    margin-bottom: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.05)
+}
+.about-modal {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.about-card {
+  text-align: center;
+  padding: 15px;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.avatar-large {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+.avatar-large:hover {
+  transform: scale(1.05);
+}
+
+.about-name {
+  color: var(--accent, #007bff);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about-description {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.skills-title {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #444;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.skills-list {
+  margin-top: 8px;
+}
+
+.pill {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 30px;
+  background: rgba(0,0,0,0.06);
+  font-size: 13px;
+  margin: 3px;
+  color: #a8a6a6;
+  transition: background 0.3s ease;
+}
+.pill:hover {
+  background: var(--accent, #007bff);
+  color: #fff;
+}
+a{
+    text-decoration: none;
 }
 
 
+.about-text p {
+    color: var(--muted);
+    line-height: 1.5
+}
 
+/* Contact / social */
+.socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    margin-right: 10px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    color: var(--muted)
+}
 
-.btn-login {
-    background: linear-gradient(135deg, #ff9800, #ff5722);
+/* Login / Lock screen overlay */
+.lock-screen {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    background: linear-gradient(180deg, rgba(3, 6, 13, 0.6), rgba(6, 10, 16, 0.6));
+    backdrop-filter: blur(6px);
+}
+
+.lock-box {
+    width: 420px;
+    max-width: 92%;
+    padding: 30px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+    border: 1px solid var(--glass-border);
+    text-align: center
+}
+
+.lock-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin: 0 auto 18px;
+    border: 3px solid rgba(255, 255, 255, 0.05)
+}
+
+.lock-name {
+    font-weight: 800;
+    color: #eaf2ff;
+    margin-bottom: 6px
+}
+
+.lock-role {
+    color: var(--muted);
+    margin-bottom: 16px
+}
+
+.btn-visit {
+    background: linear-gradient(90deg, var(--accent), #2fb6ff);
     border: none;
-    padding: 12px 25px;
-    font-weight: 700;
-    color: white;
-    font-size: 14px;
-    border-radius: 25px;
-    transition: 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    padding: 10px 18px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(10, 132, 255, 0.12)
 }
 
-.btn-login:hover {
-    background: linear-gradient(135deg, #ffb300, #e65100);
-    transform: scale(1.05);
+/* Taskbar (footer) */
+.taskbar {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 18px;
+    width: 880px;
+    max-width: 95%;
+    height: 64px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 8px 16px;
+    background: rgba(8, 10, 14, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    z-index: 999;
 }
 
-
-
-/* Hover effect */
-.modal-header .btn-close:hover {
-    background-color: rgb(199, 15, 15);
-    filter: invert(0);
-}
-
-.folder p {
-    color: white;
-}
-
-
-
-.fa-windows:hover {
-    color: #0053a6;
-}
-
-.fa-windows.active {
-    color: #0053a6;
-    /* Blue color when clicked */
-}
-
-.fa-solid:hover {
-    color: black;
-    transition: 0.5s;
+.taskbar-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.02);
     cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.02)
 }
 
+.taskbar-btn.active {
+    background: linear-gradient(90deg, var(--accent), #2fb6ff);
+    color: #001
+}
+/* CTA button */
+.btn-visit {
+  background: linear-gradient(135deg, #007bff, #00d4ff);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-visit:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+    
+
+/* Responsive small screens */
 
 
-.light {
-    background: linear-gradient(135deg, #f2f2f2, #ffffff, #e2e2e2) !important;
-    color: #1a1a1a !important;
-    transition: 0.6s;
+
+
+/* Simple utility */
+.hidden {
+    display: none
 }
 
-.light p,
-.light a,
-.light .icons p,
-.light .folder p {
-    color: #1a1a1a !important;
+.light-theme {
+    background: #f5f7fa;
+    color: #222;
 }
 
-.light .portfolio-info span {
-    color: #1a1a1a;
+.light-theme body {
+    background: linear-gradient(180deg, #f9fbfd 0%, #e7ecf2 60%);
+    color: #222;
 }
 
-.light .nav-items {
-    background-color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Folder cards */
+.light-theme .folder-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
 }
 
-.light .nav-items p {
-    color: #1a1a1a;
+.light-theme .folder-title {
+    color: #222;
 }
 
-.light .portfolio-item {
-    border: 2px solid #000;
+.light-theme .folder-sub {
+    color: #555;
+}
+
+/* Modals */
+.light-theme .modal-content {
     background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    color: #222;
 }
 
-.light .portfolio-item h5 {
-    color: #ff8c00;
+.light-theme .modal-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.light .fa-folder {
-    color: #0077ff;
-}
-
-.light .fa-folder:hover {
-    text-shadow: -3px 3px 4px rgba(0, 0, 0, 0.2);
-}
-
-.light .fa-moon {
-    color: #ffc107;
-}
-
-.light .modal-body {
-    background-color: #f9f9f9;
-    color: #1a1a1a;
-}
-
-.light .btn-login {
-    background: #ececec;
+.light-theme .modal-title {
     color: #000;
 }
 
-.light .btn-login:hover {
-    background: #007bff;
-    color: white;
+.light-theme .btn-close {
+    filter: invert(0);
 }
 
-.light .fa-facebook:hover,
-.light .fa-instagram:hover,
-.light .fa-github:hover,
-.light .fa-linkedin:hover {
-    color: #007bff;
+/* Pills */
+.light-theme .pill {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    color: #444;
 }
 
-
-.fa-facebook:hover {
-    color: orange;
+/* Project cards */
+.light-theme .project-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.fa-linkedin:hover {
-    color: orange;
+.light-theme .project-info h5 {
+    color: #111;
 }
 
-.fa-instagram:hover {
-    color: orange;
+/* About text */
+.light-theme .about-text p {
+    color: #555;
 }
 
-.fa-github:hover {
-    color: orange;
+/* Social icons */
+.light-theme .socials a {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    color: #444;
 }
 
-.shutdown {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/87b8dc36-1138-4ab7-b834-efdd829e6412/db8lvh8-7fbc37b9-0028-483d-b653-2f9b41a7d765.png/v1/fill/w_1024,h_576,q_80,strp/wallpaper___turn_off_your_computer_by_drewdini_db8lvh8-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvODdiOGRjMzYtMTEzOC00YWI3LWI4MzQtZWZkZDgyOWU2NDEyXC9kYjhsdmg4LTdmYmMzN2I5LTAwMjgtNDgzZC1iNjUzLTJmOWI0MWE3ZDc2NS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.C_8XmhqrBHZTnhVj3DOXSLYDUeddjpJ3b_YnNDuZWH4");
-    display: none;
+/* Taskbar */
+.light-theme .taskbar {
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.time {
-    position: absolute;
-    right: 0;
-    top: 30%;
-    padding-right: 1rem;
+.light-theme .taskbar-btn {
+    background: none;
+    border: none;
+    color: #222;
 }
 
-@media screen and (max-width:460px) {
-    .portfolio-item {
-        flex-direction: column;
-    }
+.light-theme .taskbar-btn.active {
+    background: linear-gradient(90deg, var(--accent), #2fb6ff);
+    color: #fff;
+}
 
-    img {
-        width: 300px;
-    }
-    #login-img {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-    }
-    .btn-login{
-        
-        font-size: 15px;
-    }
-    .login .currentTime{
-        font-size: 40px;
-    }
+/* Lock screen */
+.light-theme .lock-screen {
+    background: linear-gradient(180deg, rgba(250, 250, 250, 0.6), rgba(240, 240, 240, 0.6));
+}
+
+.light-theme .lock-box {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.light-theme .lock-name {
+    color: #111;
+}
+
+.light-theme .lock-role {
+    color: #555;
 }
