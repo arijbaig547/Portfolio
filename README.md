@@ -15,7 +15,7 @@ This is a **Windows OS inspired portfolio website** built using **HTML, CSS & Ja
 ---
 
 ## 🚀 Live Demo  
-🔗 [View Live Portfolio](https://arijbaig547.github.io/Portfolio/)  
+🔗 [View Live Portfolio](https://arij-baig-portfolio.netlify.app/)  
 
  
 
