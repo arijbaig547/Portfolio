@@ -29,6 +29,13 @@ const projects = [
     desc: 'E-commerce store demo using fake API for products and cart system.'
   },
   {
+    title: 'Movie Search App (OMDB API))',
+    img: 'project imgs/movie-app.png',
+    tags: ['HTML', 'CSS', 'JS'],
+    url: 'react-film-search.netlify.app',
+    desc: 'Movie App to help users search any movie and check its imdb Rating'
+  },
+  {
     title: 'SkyFly Flight Checking',
     img: 'project imgs/skyfly.png',
     tags: ['HTML', 'CSS', 'JS', 'Supabase'],
