@@ -1,6 +1,6 @@
 # 🖥️ Windows Themed Portfolio  
 
-![Portfolio Screenshot](<img width="1280" height="1024" alt="Welcome Page" src="https://github.com/user-attachments/assets/c813141e-dccb-47f0-9672-09e44b58f43c" />  )  
+![Portfolio Screenshot](<img width="1280" height="1024" alt="Welcome Page" src="https://github.com/user-attachments/assets/c813141e-dccb-47f0-9672-09e44b58f43c" />)  
 
 A **Windows OS inspired portfolio website** built using **HTML, CSS & JavaScript**.  
 It replicates the look and feel of a Windows desktop with **folders, icons, and a taskbar**, giving a unique and interactive way to showcase projects and skills.  
